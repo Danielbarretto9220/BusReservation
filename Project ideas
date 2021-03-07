@@ -1,0 +1,12 @@
+The list of ideas for the project.
+1. Create as system which is portable.
+2. The Bus Reservation system will have 2 main options [1st Administrative Access, 2nd Customer Portal].
+3. The Administrative Access should contain the following:
+    a. A login option for security.
+    b. Ability to insert/delete bus details.
+    c. Check Reservation.
+4. The Customer Portal should contain the following:
+    a. Option to Show all buses.
+    b. Option to Show bus details.
+    c. Option to make Reservation.
+5. An exit button should be present to return to home.
