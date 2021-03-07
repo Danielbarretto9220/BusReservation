@@ -1,0 +1,2 @@
+Bus_id,Bus_name,Bus_arrival,Bus_departure,Bus_full,Bus_seat,Bus_seat_left
+1,Mumbai-pune,7000,8000,FALSE,30,10

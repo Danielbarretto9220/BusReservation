@@ -1,14 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include<stdbool.h>
+#include <stdbool.h>
+//#include "myheader.h"
+
+typedef struct bus {
+  int id;
+  char name[50];
+  int arrival;
+  int departure;
+  char full[50];
+  int seat;
+  int seat_left;
+}bus;
 
 extern bool isHome;
-
+bus b[30];
 void main();
 void admin_login();
 void insert_BD();
 void delete_BD();
 void check_reservation();
+void bus_details();
 
 void customer(){
   printf("\n###############################################################################################\n\n");
@@ -43,3 +55,13 @@ void customer(){
       customer();
   }
 }
+
+/*
+void bus_details(){
+  FILE *fptr;
+  fptr = fopen("database\busdetails.csv","r");
+  fscanf(fptr, "%d %s %d %d %s %d %d", &b[0].id, &b[0].name, &b[0].arrival, &b[0].departure, &b[0].full, &b[0].seat, &b[0].seat_left);
+  fclose(fptr);
+  printf("Bus Name:\t%s\n",b.id[0]);
+}
+*/

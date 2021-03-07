@@ -3,10 +3,6 @@
 #include<stdbool.h>
 #include<conio.h>
 
-bool isHome=true;
-
-//void errortxt(char s[]);
-void home();
 void admin();
 void customer();
 void cust_login();
@@ -14,6 +10,9 @@ void insert_BD();
 void delete_BD();
 void check_reservation();
 void wait();
+
+bool isHome=true;
+
 
 // Home page
 int main(){
@@ -55,6 +54,7 @@ int main(){
   }
   return  0;
 }
+
 /* CODE TO COLOR THE TEXT
 void errortxt(char s[]){
 printf("\033[1;31m");
