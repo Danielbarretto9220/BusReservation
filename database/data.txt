@@ -1,7 +1,0 @@
-Bus_id = 01
-Bus_name = Mumbai-Pune
-Bus_arrival = 7000
-Bus_departure = 8000
-Bus_full = false
-Bus_seat = 30
-Bus_seat_left = 10
