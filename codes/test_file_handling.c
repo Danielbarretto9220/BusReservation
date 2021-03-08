@@ -26,7 +26,7 @@ int main(){
 
 
   FILE *filew;
-  filew = fopen("bus.dat", "a");
+  filew = fopen("database/bus.dat", "a");
   if (filew==NULL){
     return 1;
   }
@@ -36,7 +36,7 @@ int main(){
 
 
   FILE *filer;
-  filer = fopen("bus.dat", "r");
+  filer = fopen("database/bus.dat", "r");
   fseek(filer,0,SEEK_SET);
   fscanf(filer,BUS_FORMAT_IN, &b[1].id, name, &b[1].arrival, &b[1].departure, full, &b[1].seat,&b[1].seat_left);
   fclose(filer);
