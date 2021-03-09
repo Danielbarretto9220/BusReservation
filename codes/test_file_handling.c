@@ -96,12 +96,25 @@ printf("Enter no. of seats left: %d\n",b[1].seat_left);
 
 
 // Testing file reading again
+int c;
 char line[255]; //variable to store the line
 FILE* fptr; //pointer to hold file location
+
 fptr = fopen("database/bus.dat", "r");
+/*
+if(fptr = NULL){
+  printf("Database Not Found !\n");
+}
+c = getc(fptr);
+printf("\nThe value in c is :%d\n",c);*/
+
 fgets(line,255,fptr);
 fgets(line,255,fptr); //Code to read first line from the file bus.dat
+
+
+
 fclose(fptr);
+
 
 printf("%s\n",line);
 

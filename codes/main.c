@@ -1,17 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include<stdbool.h>
-#include<conio.h>
+#include <stdbool.h>
+#include <conio.h>
+#include <string.h>
+#include "myheader.h"
+
+bool isHome=true;
 
 void admin();
 void customer();
 void cust_login();
-void insert_BD();
 void delete_BD();
 void check_reservation();
-void wait();
 
-bool isHome=true;
+
 
 
 // Home page

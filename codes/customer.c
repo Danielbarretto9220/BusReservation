@@ -1,22 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
-//#include "myheader.h"
-
-typedef struct bus {
-  int id;
-  char name[50];
-  int arrival;
-  int departure;
-  char full[50];
-  int seat;
-  int seat_left;
-}bus;
+#include <string.h>
+#include "myheader.h"
 
 extern bool isHome;
 bus b[30];
 void main();
-void admin_login();
 void insert_BD();
 void delete_BD();
 void check_reservation();

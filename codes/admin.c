@@ -1,14 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <string.h>
 #include "myheader.h"
 
-extern bool isHome;
 bus bd[40];
 
-void main();
-void admin_login();
-void insert_BD();
+int main();
 void delete_BD();
 void check_reservation();
 
@@ -43,3 +41,25 @@ void admin(){
       admin();
   }
 };
+
+void admin_page(){
+  printf("\n###############################################################################################\n\n");
+  printf("\t\t\t1. Insert Bus Details\n");
+  printf("\t\t\t3. Exit\n");
+  printf("\n\t\t\tEnter your choice: ");
+  char s[100];
+  scanf("%s", s);
+  int x=atoi(s);
+  switch (x) {
+    case 1:
+    insert_BD();
+    case 2:
+      printf("\t\t\tReturning to Home\n");
+      system("cls");
+      main();
+      break;
+    default:
+      printf("\t\t\tPlease Enter a number as a choice.\n");
+      admin_page();
+  }
+}

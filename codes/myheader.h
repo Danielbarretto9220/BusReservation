@@ -1,9 +1,12 @@
 // Header file created primaraliy for testing purposes
 #include <stdio.h>
 #include <stdlib.h>
-#include<stdbool.h>
+#include <stdbool.h>
+#include <string.h>
 
-void insert_BD();
+
+
+// Structure to store Bus Details
 typedef struct bus {
   int id;
   char name[50];
@@ -14,6 +17,11 @@ typedef struct bus {
   int seat_left;
 }bus;
 
+
+extern bool isHome;
+extern void admin_page();
+extern void admin();
+// Function to make the program wait for sometime before calling another function.
 void wait(){
   int c, d;
 
@@ -22,6 +30,7 @@ void wait(){
        {}
 }
 
+// Function to Insert Bus Details into file
 void insert_BD(){
   bus bd;
   printf("\n###############################################################################################\n\n");
@@ -47,3 +56,34 @@ void insert_BD(){
   bd.departure, bd.full, bd.seat, bd.seat_left);
   fclose(filea);
 };
+
+// Function to validate the admin
+int admin_login(){
+  char username[30];
+  char password[30];
+  char username_sys[30];
+  char password_sys[30];
+  printf("\n###############################################################################################\n\n");
+  printf("\t\t\tEnter username: \n"); scanf("%s\n", username);
+  printf("\t\t\tEnter password: \n"); scanf("%s\n", password);
+  FILE* usrchk;
+  usrchk=fopen("database/login.dat", "r");
+  if(usrchk == NULL){
+    printf("Record not found");
+    return 1;
+  }
+  fscanf(usrchk,"%s, %s", username_sys, password_sys);
+  if (username == username_sys & password == password_sys){
+    printf("\t\t\tUser verifed Routing to Admin Page");
+    printf("\n###############################################################################################\n\n");
+    wait();
+    admin_page();
+    return 0;
+  }
+  else{
+    printf("\t\t\tUsername or password Incorrect! Try again!! \n");
+    wait();
+    admin();
+  }
+
+}
