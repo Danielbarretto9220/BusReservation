@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include<stdbool.h>
+#include <stdbool.h>
+#include "myheader.h"
 
 extern bool isHome;
+bus bd[40];
 
 void main();
 void admin_login();
@@ -15,12 +17,16 @@ void admin(){
   printf("\t\t\t1. Enter username and passowrd to login\n");
   printf("\t\t\t2. Return to Home page\n");
   printf("\t\t\t3. Exit\n");
+  printf("\n\t\t\tEnter your choice: ");
   char s[100];
   scanf("%s", s);
   int x=atoi(s);
   switch (x) {
     case 1:
       printf("\t\t\tadmin_login();\n");
+      insert_BD();
+      printf("Record Inserted\n");
+      printf("\n###############################################################################################\n\n");
       break;
     case 2:
       printf("\t\t\tReturning to Home\n");

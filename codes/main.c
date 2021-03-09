@@ -20,13 +20,14 @@ int main(){
     printf("\n###############################################################################################\n\n");
     printf("\t\t\tWelcome to StarLine Bus Services!\n\n");
     printf("\t\t\tSelect one \n\t\t\t1. Administrative Services\n\t\t\t2. Customer Services\n\t\t\t3. Exit\n");
+    printf("\n\t\t\tEnter your choice: ");
     char s[100];
     scanf("%s", s);
     //printf("\t\t\tOption selected\n");
     int x=atoi(s);
     switch (x) {
       case 1 :
-        system("cls");
+        system("cls"); // to clear screen!
         admin();
         break;
       case 2 :
@@ -62,11 +63,3 @@ printf("\t\t\t%s\n",s);
 printf("\033[0m");
 }
 */
-
-void wait(){
-  int c, d;
-
-   for (c = 1; c <= 37767; c++)
-       for (d = 1; d <= 37767; d++)
-       {}
-}
