@@ -9,7 +9,34 @@ const char* BUS_FORMAT_IN = "(%d, %[^,], %d, %d, %[^,], %d, %d)\n";
 
 int main(){
 
-  bus b[30];
+bus b[30];
+/*
+int bus_cnt;
+FILE *fptr = fopen("database/bus.dat", "r");
+int c = getc(fptr);
+while (c != EOF) {
+
+   c = getc(fptr);
+}
+printf("%d\n",c);
+printf("%d\n",fptr);
+char name[30];
+char full[30];
+//FILE *fptr;
+//fptr = fopen("database/bus.dat","r");
+fseek(fptr,0,SEEK_SET);
+fscanf(fptr, "(%d, %[^,], %d, %d, %[^,], %d, %d)\n", &b[1].id, name, &b[1].arrival, &b[1].departure, full, &b[1].seat, &b[1].seat_left);
+strcpy(b[1].name, name);
+strcpy(b[1].full, full);
+printf("\n###############################################################################################\n\n");
+printf("\t\t\tbus name: %s\n",b[1].name);
+printf("\t\t\tbus arrival time: %d\n",b[1].arrival);
+printf("\t\t\tbus if bus full: %s\n",b[1].full);
+printf("\t\t\tbus departure time: %d\n",b[1].departure);
+printf("\t\t\tno. of seats in bus: %d\n",b[1].seat);
+printf("\t\t\tno. of seats left: %d\n",b[1].seat_left);
+fclose(fptr);
+*/
 /*
   printf("\n###############################################################################################\n\n");
   printf("Enter Bus Details below:\n");
@@ -94,32 +121,53 @@ printf("Enter no. of seats left: %d\n",b[1].seat_left);
 
 */
 
-
+/*
 // Testing file reading again
 int c;
 char line[255]; //variable to store the line
 FILE* fptr; //pointer to hold file location
 
-fptr = fopen("database/bus.dat", "r");
+fptr = fopen("database/bus.dat", "r");*/
 /*
 if(fptr = NULL){
   printf("Database Not Found !\n");
 }
 c = getc(fptr);
 printf("\nThe value in c is :%d\n",c);*/
-
+/*
 fgets(line,255,fptr);
 fgets(line,255,fptr); //Code to read first line from the file bus.dat
 
-
-
 fclose(fptr);
 
-
 printf("%s\n",line);
+*/
 
+char name[30];
+char full[30];
 
+FILE *filer;
+filer = fopen("database/bus.dat", "r");
+fseek(filer, 0, SEEK_END);
+printf("End  pointer pos: %d\n",filer);
+fseek(filer,0,SEEK_SET);
+printf("Start pointer pos: %d\n",filer);
+fscanf(filer,BUS_FORMAT_IN, &b[1].id, name, &b[1].arrival, &b[1].departure, full, &b[1].seat,&b[1].seat_left);
+fscanf(filer,BUS_FORMAT_IN, &b[1].id, name, &b[1].arrival, &b[1].departure, full, &b[1].seat,&b[1].seat_left);
 
+fclose(filer);
+
+strcpy(b[1].name, name);
+strcpy(b[1].full, full);
+/*
+printf("\n###############################################################################################\n\n");
+printf("Enter bus name: %s\n",b[1].name);
+printf("Enter bus arrival time: %d\n",b[1].arrival);
+printf("Enter bus departure time: %d\n",b[1].departure);
+printf("Enter bus if bus full: %s\n",b[1].full);
+printf("Enter no. of seats in bus: %d\n",b[1].seat);
+printf("Enter no. of seats left: %d\n",b[1].seat_left);
+*/
 
 
 

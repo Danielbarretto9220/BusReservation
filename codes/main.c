@@ -12,7 +12,7 @@ void customer();
 void cust_login();
 void delete_BD();
 void check_reservation();
-
+void wait();
 
 
 
@@ -65,3 +65,36 @@ printf("\t\t\t%s\n",s);
 printf("\033[0m");
 }
 */
+
+// Function to make the program wait for sometime before calling another function.
+void wait(){
+  int c, d;
+
+   for (c = 1; c <= 37767; c++)
+       for (d = 1; d <= 37767; d++)
+       {}
+}
+
+// Function to Insert Bus Details into file
+void insert_BD(){
+  bus bd;
+  printf("\n###############################################################################################\n\n");
+  printf("\t\t\tAdministration Services\n\n");
+  printf("\t\t\tEnter Bus Details below:\n");
+  printf("\t\t\tEnter bus id: "); scanf("%d", &bd.id);
+  printf("\t\t\tEnter bus name: "); scanf("%s", bd.name);
+  printf("\t\t\tEnter bus arrival time: "); scanf("%d", &bd.arrival);
+  printf("\t\t\tEnter bus departure time: "); scanf("%d", &bd.departure);
+  printf("\t\t\tEnter bus if bus full: "); scanf("%s", bd.full);
+  printf("\t\t\tEnter no. of seats in bus: "); scanf("%d", &bd.seat);
+  printf("\t\t\tEnter no. of seats left: "); scanf("%d", &bd.seat_left);
+  printf("\n###############################################################################################\n\n");
+  FILE* filea;
+  filea=fopen("database/bus.dat","a");
+  fprintf(filea, "(%d, %s, %d, %d, %s, %d, %d)\n", bd.id,  bd.name, bd.arrival,
+  bd.departure, bd.full, bd.seat, bd.seat_left);
+  fclose(filea);
+  printf("\n\t\t\tRecords Updated\n");
+  wait();
+  wait();
+};
