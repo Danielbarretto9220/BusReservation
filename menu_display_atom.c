@@ -12,5 +12,22 @@ int main()
 	puts("5. Exit");
 	printf(">> ");
 	scanf("%d", &choice);
+
+  switch (choice){
+		case 1:
+		char start[10];
+		char end[10];
+		puts("   ----Choose Location----   ")
+		puts("Mumbai")
+		puts("Nagpur")
+		puts("Pune")
+		puts("Nashik")
+		puts("Goa")
+		puts("-------------------")
+		puts("Leaving from: ")
+		scanf("%d", &start)
+		puts("Going to: ")
+		scanf("%d", &end)
+	}
   return 0;
 }
