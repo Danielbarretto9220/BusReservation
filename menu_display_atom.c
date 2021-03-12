@@ -3,7 +3,7 @@ int main()
 {
 	int choice;
 	puts("/=============================================/");
-  ōōputs("                    MENU                       ");
+  puts("                    MENU                       ");
 	puts("/=============================================/");
 	puts("1. Reserve seats");
 	puts("2. Search your ticket");
@@ -17,17 +17,17 @@ int main()
 		case 1:
 		char start[10];
 		char end[10];
-		puts("   ----Choose Location----   ")
-		puts("Mumbai")
-		puts("Nagpur")
-		puts("Pune")
-		puts("Nashik")
-		puts("Goa")
-		puts("-------------------")
-		puts("Leaving from: ")
-		scanf("%d", &start)
-		puts("Going to: ")
-		scanf("%d", &end)
+		puts("   ----Choose Location----   ");
+		puts("Mumbai");
+		puts("Nagpur");
+		puts("Pune");
+		puts("Nashik");
+		puts("Goa");
+		puts("-------------------");;
+		puts("Leaving from: ");
+		scanf("%s", &start);
+		puts("Going to: ");
+		scanf("%s", &end);
 	}
   return 0;
 }
