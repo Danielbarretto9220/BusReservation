@@ -37,7 +37,7 @@ int main()
 		puts("Going to: ");
 		puts(">> ");
 		scanf("%s", end);
-        puts("SEATING CHART");
+    puts("SEATING CHART");
 		puts("---*DOOR*    *DRIVER*---");
 		puts("[A1]  [B1]----[C1]  [D1]");
 		puts("[A2]  [B2]----[C2]  [D2]");
